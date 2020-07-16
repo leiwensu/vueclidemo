@@ -7,6 +7,19 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
+
+axios.get('/api/json', {
+  params: {}
+}).then(
+  res => {
+    console.log(res);
+  }
+).catch(
+  error => {
+      console.log(error);
+  }
+)
 
 export default {
   name: 'App',
